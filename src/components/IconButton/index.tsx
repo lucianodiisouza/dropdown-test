@@ -1,16 +1,12 @@
-import { MoreIcon } from "../../assets/icons";
-import { colors } from "../../theme";
+import { HTMLAttributes, ReactNode } from "react";
 import { Container } from "./styles";
 
-const IconButton = () => {
-  const onClick = () => {
-    console.log("toggle action");
-  };
-  return (
-    <Container onClick={onClick}>
-      <MoreIcon size={32} color={colors.text.white100} />
-    </Container>
-  );
+interface Props extends HTMLAttributes<HTMLButtonElement> {
+  children: ReactNode;
+}
+
+const IconButton = ({ children, ...props }: Props) => {
+  return <Container {...props}>{children}</Container>;
 };
 
 export default IconButton;
