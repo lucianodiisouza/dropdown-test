@@ -33,9 +33,16 @@ function App() {
   ];
 
   return (
-    <div>
-      <h3>Cleaning</h3>
-      <DropDown items={items} />
+    <div className="app">
+      <div className="row">
+        <DropDown items={items} />
+        <DropDown items={items} />
+      </div>
+
+      <div className="row end">
+        <DropDown items={items} />
+        <DropDown items={items} />
+      </div>
     </div>
   );
 }
