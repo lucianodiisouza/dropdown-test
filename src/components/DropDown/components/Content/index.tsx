@@ -1,3 +1,5 @@
+import DropDownMenuItem from "../Item";
+
 const items = [
   {
     label: "Save",
@@ -14,7 +16,7 @@ const DropDownContent = () => {
   return (
     <>
       {items.map(({ label }) => (
-        <p key={label}>{label}</p>
+        <DropDownMenuItem key={label}>{label}</DropDownMenuItem>
       ))}
     </>
   );
