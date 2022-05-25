@@ -25,7 +25,7 @@ function App() {
     {
       id: 4,
       element: (
-        <a href="https://www.google.com" target="_blank">
+        <a href="https://www.google.com" target="_blank" rel="noreferrer">
           Google
         </a>
       ),
@@ -36,12 +36,12 @@ function App() {
     <div className="app">
       <div className="row">
         <DropDown items={items} />
-        <DropDown items={items} />
+        <DropDown items={items} alignContentX="right" />
       </div>
 
       <div className="row end">
-        <DropDown items={items} />
-        <DropDown items={items} />
+        <DropDown items={items} alignContentY="bottom" />
+        <DropDown items={items} alignContentX="right" alignContentY="bottom" />
       </div>
     </div>
   );

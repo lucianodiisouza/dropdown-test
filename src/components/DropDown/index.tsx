@@ -7,19 +7,19 @@ import { Container } from "./styles";
 import { DropDownMenuProps } from "./types";
 
 const DropDown = ({ ...contentProps }: DropDownMenuProps) => {
-  const [open, setOpen] = useState(false);
+  const [openMenu, setOpenMenu] = useState(false);
 
   const toggleOpen = useCallback(() => {
-    setOpen(!open);
-    console.log(open);
-  }, [open, setOpen]);
+    setOpenMenu(!openMenu);
+    console.log(openMenu);
+  }, [openMenu, setOpenMenu]);
 
   return (
-    <Container>
+    <Container {...contentProps}>
       <IconButton onClick={toggleOpen}>
         <MoreIcon size={32} color={colors.text.white100} />
       </IconButton>
-      {open && <DropDownContent {...contentProps} />}
+      {openMenu && <DropDownContent {...contentProps} />}
     </Container>
   );
 };
