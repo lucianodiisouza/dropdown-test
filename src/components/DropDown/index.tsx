@@ -11,7 +11,6 @@ const DropDown = ({ ...contentProps }: DropDownMenuProps) => {
 
   const toggleOpen = useCallback(() => {
     setOpenMenu(!openMenu);
-    console.log(openMenu);
   }, [openMenu, setOpenMenu]);
 
   return (
