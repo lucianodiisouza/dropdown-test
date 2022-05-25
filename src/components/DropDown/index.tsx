@@ -4,8 +4,9 @@ import { colors } from "../../theme";
 import IconButton from "../IconButton";
 import DropDownContent from "./components/Content";
 import { Container } from "./styles";
+import { DropDownMenuProps } from "./types";
 
-const DropDown = () => {
+const DropDown = ({ ...contentProps }: DropDownMenuProps) => {
   const [open, setOpen] = useState(false);
 
   const toggleOpen = useCallback(() => {
@@ -18,7 +19,7 @@ const DropDown = () => {
       <IconButton onClick={toggleOpen}>
         <MoreIcon size={32} color={colors.text.white100} />
       </IconButton>
-      {open && <DropDownContent />}
+      {open && <DropDownContent {...contentProps} />}
     </Container>
   );
 };
