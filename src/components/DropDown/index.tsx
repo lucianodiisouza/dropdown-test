@@ -1,10 +1,10 @@
+import IconButton from "../IconButton";
+
 const DropDown = () => {
   return (
     <div>
-      <button>{/* icon goes here */}</button>
-      <div>
-        {/* content goes here */}
-      </div>
+      <IconButton />
+      <div>{/* content goes here */}</div>
     </div>
   );
 };
